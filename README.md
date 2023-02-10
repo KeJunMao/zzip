@@ -1,5 +1,8 @@
 # zipp
+
 > Compress dist to zip, tar, taz. Powered by [compressing](https://www.npmjs.com/package/compressing)
+
+English | [简体中文](./README.zh-CN.md)
 
 ## Quick Start
 
