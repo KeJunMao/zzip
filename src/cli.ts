@@ -10,7 +10,11 @@ import chalk from "chalk";
 import { createWriteStream, existsSync } from "node:fs";
 
 async function main() {
-  const args = mri(process.argv.splice(2));
+  const args = mri(process.argv.splice(2), {
+    default: {
+      overwrite: true,
+    },
+  });
 
   const config = await loadZipConfig({
     entries: args._,
@@ -18,6 +22,7 @@ async function main() {
     mode: args.mode,
     name: args.name,
     overwrite: args.overwrite,
+    date: args.date,
   });
 
   const logger = consola.create({

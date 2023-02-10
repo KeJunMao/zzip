@@ -55,6 +55,7 @@
     "chalk": "^5.2.0",
     "compressing": "^1.7.0",
     "consola": "^2.15.3",
+    "execa": "^6.1.0",
     "mri": "^1.2.0",
     "pretty-bytes": "^6.1.0"
   }
