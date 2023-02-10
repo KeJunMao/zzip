@@ -28,7 +28,7 @@ async function main() {
   const logger = consola.create({
     stdout: process.stderr,
     defaults: {
-      tag: "zipp",
+      tag: "zzip",
     },
   });
   logger.info(chalk.cyan(`Start compressing`));

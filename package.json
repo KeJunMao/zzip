@@ -1,17 +1,17 @@
 {
-  "name": "zipp",
+  "name": "zzip",
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@7.27.0",
   "description": "",
   "author": "KeJun",
   "license": "MIT",
-  "homepage": "https://github.com/kejunmao/zipp#readme",
+  "homepage": "https://github.com/kejunmao/zzip#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kejunmao/zipp.git"
+    "url": "git+https://github.com/kejunmao/zzip.git"
   },
-  "bugs": "https://github.com/kejunmao/zipp/issues",
+  "bugs": "https://github.com/kejunmao/zzip/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {

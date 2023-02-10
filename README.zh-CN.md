@@ -1,4 +1,4 @@
-# zipp
+# zzip
 
 > 压缩 dist 为 zip, tar, taz. 由 [compressing](https://www.npmjs.com/package/compressing) 驱动
 
@@ -9,33 +9,33 @@
 压缩 dist 文件夹为 dist.zip
 
 ```sh
-npx zipp
+npx zzip
 ```
 
 压缩 dist 文件夹为 dist.tgz
 
 ```sh
-npx zipp --mode=tgz
+npx zzip --mode=tgz
 ```
 
 格式化输出名称
 
 ```sh
-npx zipp --name="format:dist-%cd%h"
+npx zzip --name="format:dist-%cd%h"
 # dist-2023-02-09-2421035.zip
 ```
 
 格式化日期名称
 
 ```sh
-npx zipp --name="format:dist-%cd-%tag" --date=format:"%Y%m%d"
+npx zzip --name="format:dist-%cd-%tag" --date=format:"%Y%m%d"
 # dist-20230209-v0.0.1.zip
 ```
 
 ## CLI 用法
 
 ```sh
-npx zipp [...参数] [<文件列表>]
+npx zzip [...参数] [<文件列表>]
 ```
 
 **参数:**

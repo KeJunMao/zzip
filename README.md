@@ -1,4 +1,4 @@
-# zipp
+# zzip
 
 > Compress dist to zip, tar, taz. Powered by [compressing](https://www.npmjs.com/package/compressing)
 
@@ -9,33 +9,33 @@ English | [简体中文](./README.zh-CN.md)
 Compression the dist folder to dist.zip
 
 ```sh
-npx zipp
+npx zzip
 ```
 
 Compression the dist folder to dist.tgz
 
 ```sh
-npx zipp --mode=tgz
+npx zzip --mode=tgz
 ```
 
 Formating output name
 
 ```sh
-npx zipp --name="format:dist-%cd%h"
+npx zzip --name="format:dist-%cd%h"
 # dist-2023-02-09-2421035.zip
 ```
 
 Formating date
 
 ```sh
-npx zipp --name="format:dist-%cd-%tag" --date=format:"%Y%m%d"
+npx zzip --name="format:dist-%cd-%tag" --date=format:"%Y%m%d"
 # dist-20230209-v0.0.1.zip
 ```
 
 ## CLI Usage
 
 ```sh
-npx zipp@latest [...args] [<entries>]
+npx zzip@latest [...args] [<entries>]
 ```
 
 **Arguments:**
