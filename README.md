@@ -1,6 +1,6 @@
 # zzip
 
-> Compress dist to zip, tar, taz. Powered by [compressing](https://www.npmjs.com/package/compressing)
+> Compression dist to zip, tar, taz. Powered by [compressing](https://www.npmjs.com/package/compressing)
 
 English | [简体中文](./README.zh-CN.md)
 
@@ -10,12 +10,14 @@ Compression the dist folder to dist.zip
 
 ```sh
 npx zzip
+# dist.zip
 ```
 
 Compression the dist folder to dist.tgz
 
 ```sh
 npx zzip --mode=tgz
+# dist.tgz
 ```
 
 Formating output name
@@ -35,7 +37,7 @@ npx zzip --name="format:dist-%cd-%tag" --date=format:"%Y%m%d"
 ## CLI Usage
 
 ```sh
-npx zzip@latest [...args] [<entries>]
+npx zzip [...args] [<entries>]
 ```
 
 **Arguments:**
@@ -48,7 +50,7 @@ npx zzip@latest [...args] [<entries>]
 
 ## Configuration
 
-Configuration is loaded by [unjs/c12](https://github.com/unjs/c12) from cwd. You can use either `zip.json`, `zip.{ts,js,mjs,cjs}`, `.ziprc` or use the `zip` field in `package.json`.
+Configuration is loaded by [unjs/c12](https://github.com/unjs/c12) from cwd. You can use either `zip.config.json`, `zip.config.{ts,js,mjs,cjs}`, `.ziprc`.
 
 See [./src/config.ts](./src/config.ts) for available options and defaults.
 

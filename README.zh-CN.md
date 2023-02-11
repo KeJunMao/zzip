@@ -25,7 +25,7 @@ npx zzip --name="format:dist-%cd%h"
 # dist-2023-02-09-2421035.zip
 ```
 
-格式化日期名称
+格式化输出日期
 
 ```sh
 npx zzip --name="format:dist-%cd-%tag" --date=format:"%Y%m%d"
@@ -49,7 +49,7 @@ npx zzip [...参数] [<文件列表>]
 ## 配置
 
 配置项使用 [unjs/c12](https://github.com/unjs/c12) 自动从 cwd 中加载。
-您可以使用 `zip.json`, `zip.{ts,js,mjs,cjs}`, `.ziprc` 或者在 `package.json` 中使用 `zip` 字段
+你可以使用 `zip.config.json`, `zip.config.{ts,js,mjs,cjs}` 或者 `.ziprc`
 
 有关可用选项和默认值，请参见[./src/config.ts](./src/config.ts)。
 
