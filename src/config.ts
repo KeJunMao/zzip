@@ -1,7 +1,7 @@
 import { loadConfig } from "c12";
 import * as compressing from "compressing";
 import { resolve } from "node:path";
-import { getLastCommitWithFormat, getLastGitTag } from "./git";
+import { format } from "./format";
 
 type Mode = Exclude<keyof typeof compressing, "gzip">;
 
@@ -16,7 +16,7 @@ export interface ZipConfig {
 
 const ConfigDefaults: ZipConfig = {
   entries: [],
-  name: "dist",
+  name: "format:%entryname",
   outDir: ".",
   mode: "zip",
   overwrite: true,
@@ -41,8 +41,7 @@ export async function loadZipConfig(
     new Set(config?.entries.map((entry) => resolve(process.cwd(), entry)))
   );
   if (config?.name.startsWith("format:")) {
-    config.name = config.name.replaceAll("%tag", await getLastGitTag());
-    config.name = await getLastCommitWithFormat(config.name, config.date);
+    config.name = await format(config);
   }
   return config!;
 }
