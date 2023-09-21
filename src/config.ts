@@ -16,7 +16,7 @@ export interface ZipConfig {
 
 const ConfigDefaults: ZipConfig = {
   entries: [],
-  name: "format:%entryname",
+  name: "format:%entry.name",
   outDir: ".",
   mode: "zip",
   overwrite: true,

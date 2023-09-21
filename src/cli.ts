@@ -8,6 +8,7 @@ import prettyBytes from "pretty-bytes";
 import chalk from "chalk";
 
 import { createWriteStream, existsSync } from "node:fs";
+import { logger } from "./utils";
 
 async function main() {
   const args = mri(process.argv.splice(2), {
@@ -25,12 +26,6 @@ async function main() {
     date: args.date,
   });
 
-  const logger = consola.create({
-    stdout: process.stderr,
-    defaults: {
-      tag: "zzip",
-    },
-  });
   logger.info(chalk.cyan(`Start compressing`));
 
   if (
