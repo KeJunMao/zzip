@@ -43,7 +43,7 @@ npx zzip [...args] [<entries>]
 **Arguments:**
 
 - `--outdir`: The output dir, **.** will be used as default.
-- `--name`: The output name. When not provided, **format:%entry.name** will be used as default. Use `--name[=<format>]` to format name. See [git commit formatting](https://www.git-scm.com/docs/git-log#Documentation/git-log.txt---prettyltformatgt), ，除了支持 git 提供的格式外，还支持以下格式:
+- `--name`: The output name. When not provided, **format:%entry.name** will be used as default. Use `--name[=<format>]` to format name. See [git commit formatting](https://www.git-scm.com/docs/git-log#Documentation/git-log.txt---prettyltformatgt), In addition to the formats provided by git, the following formats are supported:
   - `%tag`: latest tag name
   - `%entry.name`: first file/dir name
   - `%package.name`: package.json name field
