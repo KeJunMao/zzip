@@ -23,14 +23,14 @@ export async function format(config: ZipConfig) {
   try {
     name = name.replaceAll("%tag", await getLastGitTag());
   } catch (error: any) {
-    logger.warn(error.message);
+    name = name.replaceAll("%tag", "");
   }
   name = name.replaceAll("%entry.name", getFirstEntryName(config.entries));
   name = name.replaceAll("%package.name", getPackageName(process.cwd()));
   try {
     name = await getLastCommitWithFormat(name, config.date);
-  } catch (error: any) {
-    logger.warn(error.message);
-  }
+  } catch (error: any) {}
+
+  name = name.replace("format:", "");
   return name;
 }
