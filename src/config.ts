@@ -29,6 +29,7 @@ export async function loadZipConfig(
   const { config } = await loadConfig<ZipConfig>({
     name: "zip",
     defaults: ConfigDefaults,
+    globalRc: true,
     overrides: {
       ...(overrides as ZipConfig),
     },
