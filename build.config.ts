@@ -1,3 +1,4 @@
+import { rmSync } from "fs";
 import { defineBuildConfig } from "unbuild";
 
 export default defineBuildConfig({
@@ -7,5 +8,11 @@ export default defineBuildConfig({
   rollup: {
     emitCJS: true,
   },
-  failOnWarn: false
+  failOnWarn: false,
+  hooks: {
+    "build:done": () => {
+      rmSync("dist/cli.d.ts", { recursive: true, force: true });
+      rmSync("dist/cli.cjs", { recursive: true, force: true });
+    }
+  }
 });
