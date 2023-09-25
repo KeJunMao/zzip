@@ -2,8 +2,6 @@ import { basename, join } from "node:path";
 import { ZipConfig } from "./config";
 import { getLastCommitWithFormat, getLastGitTag } from "./git";
 import { createRequire } from "module";
-import { logger } from "./utils";
-
 const _require = createRequire(import.meta.url);
 
 function getFirstEntryName(entries: string[]) {
@@ -13,7 +11,7 @@ function getFirstEntryName(entries: string[]) {
 function getPackageName(cwd: string) {
   try {
     const packageJSON = _require(join(cwd, "package.json"));
-    return packageJSON.name;
+    return packageJSON.name ?? basename(cwd);
   } catch (error) {}
   return "";
 }
