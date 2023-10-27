@@ -46,7 +46,7 @@ npx zzip [...args] [<entries>]
 - `--name`: The output name. When not provided, **format:%entry.name** will be used as default. Use `--name[=<format>]` to format name. See [git commit formatting](https://www.git-scm.com/docs/git-log#Documentation/git-log.txt---prettyltformatgt), In addition to the formats provided by git, the following formats are supported:
   - `%tag`: latest tag name
   - `%entry.name`: first file/dir name
-  - `%package.name`: package.json name field
+  - `%package.name`: package.json displayName or name field
 - `--mode`: Compression mode. When not provided, **zip** will be used as as default.
 - `--overwrite`: Whether to overwrite the output file, **true** will be used as as default. When using `--no-overwrite`, an error will be thrown when the file exists
 - `--date=<format>`: **short** will be used as as default. see [more](https://www.git-scm.com/docs/git-log#Documentation/git-log.txt---dateltformatgt)

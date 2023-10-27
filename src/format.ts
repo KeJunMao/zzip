@@ -11,7 +11,8 @@ function getFirstEntryName(entries: string[]) {
 function getPackageName(cwd: string) {
   try {
     const packageJSON = _require(join(cwd, "package.json"));
-    return packageJSON.name ?? basename(cwd);
+    const name = packageJSON.displayName ?? packageJSON.name ?? basename(cwd);
+    return name.replace(/[\\\/:*?"<>|\s]/gm, "-")
   } catch (error) {}
   return "";
 }
